@@ -1,0 +1,99 @@
+// $charcoal: #231f20;
+// $blue: #98c0c3;
+// $link: $blue;
+// $hover: #374344;
+// $active: #8CADAD;
+// $subnav: #C4CECD;
+// $subnavHover: #708688;
+// $richblue: #00827f;
+
+// Define your breakpoints here
+$break-small: 640px;
+$break-medium: 960px;
+$break-large: 1200px;
+
+@mixin helvetica {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+@mixin vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin clear {
+  display: inline-block;
+  width: 100%;
+}
+
+
+// this mixin can be used for multiple breakpoints
+// body {
+//   @include respond(small, medium, large) {
+//     background: red;
+//   }
+// }
+
+@mixin respond($sizes...) {
+  @each $size in $sizes {
+    @include respond-to(#{$size}) { @content; }
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $break-large + 1) { @content; }
+  }
+}
+
+
+@mixin only-small {
+  @include respond(medium, large) { display: none !important; }
+}
+@mixin only-medium {
+  @include respond(small, large) { display: none !important; }
+}
+@mixin only-large {
+  @include respond(small, medium) { display: none !important; }
+}
+@mixin except-small {
+  @include respond(small) { display: none !important; }
+}
+@mixin except-medium {
+  @include respond(medium) { display: none !important; }
+}
+@mixin except-large {
+  @include respond(large) { display: none !important; }
+}
+
+@mixin h1 {
+  font-size: 2.5em;
+}
+@mixin h2 {
+  font-size: 1.625em;
+}
+@mixin h3 {
+  font-size: 1.25em;
+}
+@mixin h4 {
+  font-size: 1em;
+}
+@mixin p  {
+  font-size: 1em;
+}
+@mixin small {
+  font-size: 0.75em;
+}
