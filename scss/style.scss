@@ -1,5 +1,5 @@
 /*!
-Theme Name: YourCustomThemeName
+Theme Name: pen-archive
 Author: Yosuke Hasumi
 Author URI: http://mediumrareinc.com
 Version: 1.0
@@ -8,7 +8,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import 'reset';
+@import 'variables';
 @import 'mixins';
+@import 'global';
+@import 'typography';
+@import 'theme';
 
 //--------------------------------------------------------------- TEMPLATE
 // body:after {

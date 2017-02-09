@@ -1,16 +1,3 @@
-// $charcoal: #231f20;
-// $blue: #98c0c3;
-// $link: $blue;
-// $hover: #374344;
-// $active: #8CADAD;
-// $subnav: #C4CECD;
-// $subnavHover: #708688;
-// $richblue: #00827f;
-
-// Define your breakpoints here
-$break-small: 640px;
-$break-medium: 960px;
-$break-large: 1200px;
 
 @mixin helvetica {
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -19,24 +6,16 @@ $break-large: 1200px;
   font-style: normal;
 }
 
-@mixin vcenter {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+// @mixin vcenter {
+//   position: relative;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
 
 @mixin clear {
   display: inline-block;
   width: 100%;
 }
-
-
-// this mixin can be used for multiple breakpoints
-// body {
-//   @include respond(small, medium, large) {
-//     background: red;
-//   }
-// }
 
 @mixin respond($sizes...) {
   @each $size in $sizes {
@@ -79,21 +58,9 @@ $break-large: 1200px;
   @include respond(large) { display: none !important; }
 }
 
-@mixin h1 {
-  font-size: 2.5em;
-}
-@mixin h2 {
-  font-size: 1.625em;
-}
-@mixin h3 {
-  font-size: 1.25em;
-}
-@mixin h4 {
-  font-size: 1em;
-}
-@mixin p  {
-  font-size: 1em;
-}
-@mixin small {
-  font-size: 0.75em;
-}
+.only-small    { @include only-small; }
+.only-medium   { @include only-medium; }
+.only-large    { @include only-large; }
+.except-small  { @include except-small; }
+.except-medium { @include except-medium; }
+.except-large  { @include except-large; }
