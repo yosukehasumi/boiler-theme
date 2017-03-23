@@ -1,11 +1,32 @@
+//---------------------------------------------------------------
+// Color Swatches
 // $charcoal: #231f20;
 // $blue: #98c0c3;
-// $link: $blue;
-// $hover: #374344;
-// $active: #8CADAD;
 // $subnav: #C4CECD;
 // $subnavHover: #708688;
 // $richblue: #00827f;
+
+//---------------------------------------------------------------
+// General Options
+
+
+//---------------------------------------------------------------
+// Links + Navigation
+$link: #000;
+$hover: #fff;
+$nav: $link;
+$nav_hover: $hover;
+$sub_nav: $link;
+$sub_nav_hover: $hover;
+
+//---------------------------------------------------------------
+// Buttons
+$button_color: #000;
+
+//---------------------------------------------------------------
+// Breakpoints
+
+
 
 // Define your breakpoints here
 $break-small: 640px;

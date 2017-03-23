@@ -31,3 +31,9 @@ function body_classes( $classes ){
   return $classes;
 }
 add_filter( 'body_class', 'body_classes' );
+//---------------------------------------------------------------
+// Moving Yoast SEO Metabox Down
+add_filter( 'wpseo_metabox_prio', 'send_yoast_seo_metabox_to_bottom' );
+function send_yoast_seo_metabox_to_bottom() {
+  return 'low';
+}

@@ -8,7 +8,6 @@ require_once 'includes/views/acf-display-flex-content.php';
 # include other functions
 require_once 'includes/admin-functions.php';
 require_once 'includes/display-functions.php';
-require_once 'includes/picture.php';
 
 //---------------------------------------------------------------
 function enqueue_custom_scripts() {
@@ -72,3 +71,32 @@ add_action( 'widgets_init', 'register_sidebar_locations' );
 // }
 // add_action( 'init', 'register_post_types' );
 
+//---------------------------------------------------------------
+// Define the WP default image sizes
+update_option( 'thumbnail_size_w', 200 );
+update_option( 'thumbnail_size_h', 200 );
+update_option( 'thumbnail_crop', 1 );
+update_option( 'medium_size_w', 600 );
+update_option( 'medium_size_h', 600 );
+update_option( 'medium_crop', 0 );
+update_option( 'large_size_w', 1200 );
+update_option( 'large_size_h', 1200 );
+update_option( 'large_crop', 0 );
+
+//---------------------------------------------------------------
+# Define image sizes, make sure big goes at the top
+# [image-name] => array( [width], [height], [crop])
+# When adding a new image size, remember to update
+# the placeholder image function.
+// $image_sizes = array(
+//   'image-banner'  => array(1920, 864, true),
+//   'hero-slide'    => array(1920, 1056,  true),
+//   'feature-tile'  => array(600, 400,  true),
+// );
+
+//---------------------------------------------------------------
+# Register each of the images from the array above
+// foreach($image_sizes as $name => $attr){
+//   add_image_size( $name, $attr[0], $attr[1], $attr[2]);
+// }
+//---------------------------------------------------------------

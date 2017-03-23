@@ -24,3 +24,45 @@ function flex_video_shortcode($atts, $content = NULL) {
   return $pre_content.$content.$post_content;
 }
 add_shortcode( 'flex-video', 'flex_video_shortcode' );
+//---------------------------------------------------------------
+function get_placeholder_image_uri($size = 'large') {
+  $image_uri = '';
+  switch ($size) {
+    case 'thumbnail':
+    $image_uri = get_stylesheet_directory_uri().'/images/placeholder-300x300.jpg';
+    break;
+    case 'medium':
+    $image_uri = get_stylesheet_directory_uri().'/images/placeholder-570x320.jpg';
+    break;
+    case 'large':
+    $image_uri = get_stylesheet_directory_uri().'/images/placeholder-1200x540.jpg';
+    break;
+    default:
+    $image_uri = get_stylesheet_directory_uri().'/images/placeholder-1920x700.jpg';
+    break;
+  }
+  return  $image_uri;
+}
+//---------------------------------------------------------------
+function get_excerpt($limit, $content = false, $post_id = false) {
+  global $post;
+  if(empty($post_id)) {
+    $post_id = $post->ID;
+  }
+  $excerpt = get_post_field('post_excerpt', $post_id, 'raw');
+  if(empty($content) && !empty($excerpt)) {
+    $content = $excerpt;
+  } else {
+    $content = get_the_content($post_id);
+  }
+  $content = strip_tags($content);
+  $content = explode(' ', $content, $limit);
+  if (count($content) >= $limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'&hellip;';
+  } else {
+    $content = implode(" ",$content);
+  }
+  $content = apply_filters('excerpt', $content);
+  return $content;
+}

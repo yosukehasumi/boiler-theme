@@ -20,7 +20,7 @@
   <![endif]-->
   <header id="site_header">
   	<a href="<?php echo home_url(); ?>" id="logo_link" class="sprite"><?php wp_title(); ?></a>
-  	<nav id="header_navigation" class="site-navigaton">
-  		<?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false )); ?>
+  	<nav id="header_navigation" class="site-navigation">
+  		<?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
   	</nav>
   </header>

@@ -1,22 +1,39 @@
-
+//---------------------------------------------------------------
+// Fonts
 @mixin helvetica {
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
 }
+//---------------------------------------------------------------
+// Alignment Helpers
+@mixin vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-// @mixin vcenter {
-//   position: relative;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
+@mixin xycenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 @mixin clear {
   display: inline-block;
   width: 100%;
 }
-
+//---------------------------------------------------------------
+// Hover State Helper
+@mixin hover {
+  &:hover, &:active, &:focus {
+    @content;
+  }
+}
+//---------------------------------------------------------------
+// Media Query Helpers
 @mixin respond($sizes...) {
   @each $size in $sizes {
     @include respond-to(#{$size}) { @content; }
@@ -24,43 +41,19 @@
 }
 
 @mixin respond-to($media) {
-  @if $media == small {
-    @media only screen and (max-width: $break-small) { @content; }
+  @if $media == small_only {
+    @media screen and (max-width: 39.9375em) {@content}
   }
-  @else if $media == medium {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  @else if $media == medium_only {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {@content}
   }
-  @else if $media == large {
-    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+  @else if $media == medium_up {
+    @media screen and (min-width: 40em) {@content}
   }
-  @else if $media == wide {
-    @media only screen and (min-width: $break-large + 1) { @content; }
+  @else if $media == large_only {
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {@content}
+  }
+  @else if $media == large_up {
+    @media screen and (min-width: 64em) {@content}
   }
 }
-
-
-@mixin only-small {
-  @include respond(medium, large) { display: none !important; }
-}
-@mixin only-medium {
-  @include respond(small, large) { display: none !important; }
-}
-@mixin only-large {
-  @include respond(small, medium) { display: none !important; }
-}
-@mixin except-small {
-  @include respond(small) { display: none !important; }
-}
-@mixin except-medium {
-  @include respond(medium) { display: none !important; }
-}
-@mixin except-large {
-  @include respond(large) { display: none !important; }
-}
-
-.only-small    { @include only-small; }
-.only-medium   { @include only-medium; }
-.only-large    { @include only-large; }
-.except-small  { @include except-small; }
-.except-medium { @include except-medium; }
-.except-large  { @include except-large; }
