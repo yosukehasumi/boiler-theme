@@ -1,31 +1,31 @@
-@mixin h1 {
-  font-size: 2.5em;
-}
-@mixin h2 {
-  font-size: 1.625em;
-}
-@mixin h3 {
-  font-size: 1.25em;
-}
-@mixin h4 {
-  font-size: 1em;
-}
-@mixin p  {
-  font-size: 1em;
-}
-@mixin small {
-  font-size: 0.75em;
-}
+// @mixin h1 {
+//   font-size: 2.5em;
+// }
+// @mixin h2 {
+//   font-size: 1.625em;
+// }
+// @mixin h3 {
+//   font-size: 1.25em;
+// }
+// @mixin h4 {
+//   font-size: 1em;
+// }
+// @mixin p  {
+//   font-size: 1em;
+// }
+// @mixin small {
+//   font-size: 0.75em;
+// }
 
-h1, h2, h3, h4 { margin-bottom: 0.5em; }
-p, ul { margin-bottom: 1em; }
+// h1, h2, h3, h4 { margin-bottom: 0.5em; }
+// p, ul { margin-bottom: 1em; }
 
-h1, .h1       { @include h1; }
-h2, .h2       { @include h2; }
-h3, .h3       { @include h3; }
-h4, .h4       { @include h4; }
-p , .p        { @include p;  }
-small, .small { @include small; }
-ul            { @include p;}
-strong        { font-weight: 700;}
-em            { font-style: italic;}
+// h1, .h1       { @include h1; }
+// h2, .h2       { @include h2; }
+// h3, .h3       { @include h3; }
+// h4, .h4       { @include h4; }
+// p , .p        { @include p;  }
+// small, .small { @include small; }
+// ul            { @include p;}
+// strong        { font-weight: 700;}
+// em            { font-style: italic;}

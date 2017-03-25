@@ -11,9 +11,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 //---------------------------------------------------------------
 // Import Theme SCSS
-@import 'reset';
 @import 'variables';
+@import 'foundation-scss/foundation.scss';
 @import 'mixins';
 @import 'global';
 @import 'typography';
-@import 'theme';
+@import 'header';
+@import 'navigation';
+@import 'flex-content';
+@import 'content';
+@import 'footer';

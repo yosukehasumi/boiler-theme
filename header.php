@@ -15,11 +15,11 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!--[if lt IE 9]>
-  <div class="browsehappy" style="background-color: red; color: white; position:fixed; top: 0; left:0; width: 100%; padding:10px; text-align:center;" onclick="">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+  <!--[if lt IE 9]>
+    <div class="browsehappy" style="background-color: #B71C1C; color: white; position:fixed; top: 0; left:0; width: 100%; padding:10px; text-align:center; font-family: sans-serif;" onclick="this.style.display='none';">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank" style="color: #64B5F6;">upgrade your browser</a> to improve your experience.</div>
   <![endif]-->
   <header id="site_header">
-  	<a href="<?php echo home_url(); ?>" id="logo_link" class="sprite"><?php wp_title(); ?></a>
+  	<a href="<?php echo home_url(); ?>" id="logo_link" class="sprite"><?php bloginfo(); ?></a>
   	<nav id="header_navigation" class="site-navigation">
   		<?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
   	</nav>

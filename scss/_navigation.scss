@@ -1,0 +1,55 @@
+// _navigation.scss
+nav.site-navigation {
+  ul.menu, ul.sub-menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  ul.sub-menu {
+    display: none;
+  }
+  li.menu-item {
+    display: inline-block;
+    > a {
+      display: block;
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      color: $nav;
+      transition: color 0.2s;
+      @include hover {
+        color: $nav_hover;
+      }
+    }
+    &.current-menu-item {
+      > a {
+        color: $nav_hover;
+      }
+    }
+  }
+  li.menu-item.menu-item-has-children {
+    position: relative;
+    > a {
+      &:after {
+        content: '\f107';
+        font-family: 'fontawesome';
+        font-size: 1em;
+        color: $nav;
+        transition: color 0.2s;
+        display: inline;
+        margin-left: 0.5em;
+      }
+      @include hover {
+        &:after {
+          color: $nav_hover;
+        }
+      }
+    }
+    > ul.sub-menu {
+      width: 300px;
+      position: absolute;
+      top: 100%;
+      left: -1em;
+      background-color: $white;
+    }
+  }
+}
