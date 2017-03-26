@@ -17,7 +17,7 @@ var merge2        = require('merge2');
 
 //---------------------------------------------------------------
 // To install the needed modules run this command:
-// npm install gulp gulp-util gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-babel gulp-concat merge2  --save-dev
+// npm install gulp gulp-util gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-babel gulp-concat merge2 babel-preset-es2015 --save-dev
 
 //---------------------------------------------------------------
 // tasks
