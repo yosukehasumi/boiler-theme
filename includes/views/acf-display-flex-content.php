@@ -25,14 +25,14 @@ function get_flex_content(){
         case 'hero_slider' :
         $output .= flex_hero_slider($flex_content);
         break;
-        case 'triple_stacked_tiles' :
-        $output .= flex_triple_stacked_tiles($flex_content);
+        case 'accordion_group' :
+        $output .= flex_accordion_group($flex_content);
         break;
-        case 'dual_promo_tiles' :
-        $output .= flex_dual_promo_tiles($flex_content);
+        case 'tab_group' :
+        $output .= flex_tab_group($flex_content);
         break;
-        case 'testimonial_slider' :
-        $output .= flex_testimonial_slider($flex_content);
+        case 'thumbnail_gallery' :
+        $output .= flex_thumbnail_gallery($flex_content);
         break;
       }
     }
@@ -42,7 +42,9 @@ function get_flex_content(){
 //---------------------------------------------------------------
 function flex_full_width($flex_content){
   $output = '';
-  $output .= '<section class="layout-section one_column">';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section one_column '.$space_before.' '.$space_after.'">';
   $output .= '<div class="row">';
   $output .= '<div class="small-12 columns">';
   $output .= apply_filters( 'the_content', $flex_content['column1'] );
@@ -54,7 +56,9 @@ function flex_full_width($flex_content){
 //---------------------------------------------------------------
 function flex_two_col($flex_content){
   $output = '';
-  $output .= '<section class="layout-section two_columns">';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section two_columns '.$space_before.' '.$space_after.'">';
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-6 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-6 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -65,7 +69,9 @@ function flex_two_col($flex_content){
 //---------------------------------------------------------------
 function flex_three_col($flex_content){
   $output = '';
-  $output .= '<section class="layout-section three_columns">';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section three_columns '.$space_before.' '.$space_after.'">';
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -77,7 +83,9 @@ function flex_three_col($flex_content){
 //---------------------------------------------------------------
 function flex_two_columns_sidebar_left($flex_content){
   $output = '';
-  $output .= '<section class="layout-section two_columns_sidebar_left">';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section two_columns_sidebar_left '.$space_before.' '.$space_after.'">';
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-8 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -88,7 +96,9 @@ function flex_two_columns_sidebar_left($flex_content){
 //---------------------------------------------------------------
 function flex_two_columns_sidebar_right($flex_content){
   $output = '';
-  $output .= '<section class="layout-section two_columns_sidebar_right">';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section two_columns_sidebar_right '.$space_before.' '.$space_after.'">';
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-8 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -99,17 +109,19 @@ function flex_two_columns_sidebar_right($flex_content){
 //---------------------------------------------------------------
 function flex_hero_slider($flex_content){
   $output = '';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
   if(count($flex_content['slides']) > 0) {
-    $output .= '<section class="layout-section hero_slider padded-extra">';
+    $output .= '<section class="layout-section hero_slider '.$space_before.' '.$space_after.'">';
     $output .= '<div class="row">';
     $output .= '<div class="hero-slider cycle-slideshow" data-cycle-auto-height="container" data-cycle-fx="scrollHorz" data-cycle-timeout="8000" data-cycle-slides="> div.hero-slide">';
     foreach ($flex_content['slides'] as $slide) {
       $background = (!empty($slide['slide_background'])) ? 'style="background-image: url('.$slide['slide_background']['sizes']['hero-slide'].')";': '';
       $output .= '<div class="hero-slide" '.$background.'>';
       if(!empty($slide['slide_image'])) {
-      $output .= '<div class="hero-slide-image-wrapper">';
-      $output .= '<img src="'.$slide['slide_image']['sizes']['medium'].'" alt="'.$slide['slide_image']['alt'].'">';
-      $output .= '</div>';
+        $output .= '<div class="hero-slide-image-wrapper">';
+        $output .= '<img src="'.$slide['slide_image']['sizes']['medium'].'" alt="'.$slide['slide_image']['alt'].'">';
+        $output .= '</div>';
       }
       $output .= '<div class="hero-slide-content">';
 
@@ -127,106 +139,108 @@ function flex_hero_slider($flex_content){
   return $output;
 }
 //---------------------------------------------------------------
-function flex_triple_stacked_tiles($flex_content) {
+function flex_accordion_group($flex_content) {
   $output = '';
-  $output .= '<section class="layout-section triple_stacked_tiles padded">';
-  $output .= '<div class="row make-it-flex">';
-  $output .= '<div class="tile_column_left">';
-  $output .= '<div class="tile_one">';
-  $output .= '<div class="tile-inner">';
-  $output .= '<h4>'.$flex_content['tile_1_title'].'</h4>';
-  $output .= $flex_content['tile_1_description'];
-  $output .= '<a href="'.$flex_content['tile_1_link'].'">'.$flex_content['tile_1_link'].'</a>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '<div class="tile_column_right">';
-  $output .= '<div class="tile_two">';
-  $output .= '<div class="tile-inner">';
-  $output .= '<h4>'.$flex_content['tile_2_title'].'</h4>';
-  $output .= $flex_content['tile_2_description'];
-  $output .= '<a href="'.$flex_content['tile_2_link'].'">'.$flex_content['tile_2_link'].'</a>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '<div class="tile_three">';
-  $output .= '<div class="tile-inner">';
-  $output .= '<h4>'.$flex_content['tile_3_title'].'</h4>';
-  $output .= $flex_content['tile_3_description'];
-  $output .= '<a href="'.$flex_content['tile_3_link'].'">'.$flex_content['tile_3_link'].'</a>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</section>';
-  return $output;
-}
-//---------------------------------------------------------------
-function flex_dual_promo_tiles($flex_content) {
-  $output = '';
-  $output .= '<section class="layout-section dual_promo_tiles padded-extra">';
-  $output .= '<div class="row collapse">';
-  $tile_1_background = (!empty($flex_content['tile_1_image'])) ? 'style="background-image: url('.$flex_content['tile_1_image']['sizes']['promo-tile'].')";' : '';
-  $output .= '<div class="small-12 medium-6 columns">';
-  $output .= '<div class="tile_one" '.$tile_1_background.'>';
-  $output .= '<div class="tile-inner">';
-  $output .= '<h4>'.$flex_content['tile_1_title'].'</h4>';
-  $output .= $flex_content['tile_1_description'];
-  $output .= '<a href="'.$flex_content['tile_1_link'].'">'.$flex_content['tile_1_link'].'</a>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $tile_2_background = (!empty($flex_content['tile_2_image'])) ? 'style="background-image: url('.$flex_content['tile_2_image']['sizes']['promo-tile'].')";' : '';
-  $output .= '<div class="small-12 medium-6 columns">';
-  $output .= '<div class="tile_two" '.$tile_2_background.'>';
-  $output .= '<div class="tile-inner">';
-  $output .= '<h4>'.$flex_content['tile_2_title'].'</h4>';
-  $output .= $flex_content['tile_2_description'];
-  $output .= '<a href="'.$flex_content['tile_2_link'].'">'.$flex_content['tile_2_link'].'</a>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</div>';
-  $output .= '</section>';
-  return $output;
-}
-//---------------------------------------------------------------
-function flex_testimonial_slider($flex_content) {
-  $output = '';
-  $testimonials = get_posts(array(
-    'post_type' => 'testimonial',
-    'posts_per_page' => -1,
-    ));
-  if($testimonials) {
-    $output .= '<section class="layout-section testimonial_slider padded">';
-    $output .= '<div class="row">';
-    $output .= '<div class="testimonial-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="8000" data-cycle-slides="> div.testimonial-slide" data-cycle-pager=".testimonial-pager" data-cycle-pager-template="<span class=\'testimonial-pager-icon\'></span>">';
-    $output .= '<div class="testimonial-pager"></div>';
-    foreach ($testimonials as $testimonial) {
-      $testimonial_id = $testimonial->ID;
-      $background_image = get_field('slide_background', $testimonial_id);
-      $background = ($background_image) ? 'style="background-image: url('.$background_image['sizes']['hero-slide'].')";': '';
-      $output .= '<div class="testimonial-slide" '.$background.'>';
-      $slide_image = get_field('slide_image', $testimonial_id);
-      if($slide_image) {
-      $output .= '<div class="testimonial-slide-image-wrapper">';
-      $output .= '<img src="'.$slide_image['sizes']['medium'].'" alt="'.$slide_image['alt'].'">';
-      $output .= '</div>';
-      }
-      $output .= '<div class="testimonial-slide-content">';
-
-      $output .= '<blockquote class="testimonial-slide-blockquote">';
-      $description = get_field('testimonial_description', $testimonial_id);
-      if($description) $output .= $description;
-      $byline = get_field('testimonial_byline', $testimonial_id);
-      if($byline) $output .= '<cite>'.$byline.'</cite>';
-      $output .= '</blockquote>';
-
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section accordion_group '.$space_before.' '.$space_after.'">';
+  $output .= '<div class="row">';
+  $output .= '<div class="small-12 columns">';
+  if($flex_content['panels']) {
+    $output .= '<div class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">';
+    foreach ($flex_content['panels'] as $panel) {
+      $is_active = ($panel['panel_open_by_default']) ? 'is-active' : '';
+      $output .= '<div class="accordion-item '.$is_active.'" data-accordion-item>';
+      $output .= '<a href="#" class="accordion-title">'.$panel['panel_title'].'</a>';
+      $output .= '<div class="accordion-content" data-tab-content>';
+      $output .= apply_filters('the_content', $panel['panel_content']);
       $output .= '</div>';
       $output .= '</div>';
     }
     $output .= '</div>';
-    $output .= '</div>';
-    $output .= '</section>';
   }
+  $output .= '</div>';
+  $output .= '</div>';
+  $output .= '</section>';
+  return $output;
+}
+//---------------------------------------------------------------
+function flex_tab_group($flex_content) {
+  $output = '';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section tab_group '.$space_before.' '.$space_after.'">';
+  $output .= '<div class="row">';
+  if($flex_content['panels']) {
+    $tab_group_id = uniqid();
+    $collapsable = ($flex_content['collapsable_tabs']) ? 'data-active-collapse="true"' : '';
+    if($flex_content['tab_orientation'] == 'vertical') {
+      // Tabs Are Vertical
+      $output .= '<div class="medium-3 columns">';
+      $output .= '<ul class="tabs vertical" data-tabs '.$collapsable.' id="'.$tab_group_id.'">';
+      foreach ($flex_content['panels'] as $key => $panel) {
+        $is_active = ($panel['panel_open_by_default']) ? 'is-active' : '';
+        $flex_content['panels'][$key]['panel_id'] = uniqid();
+        $output .= '<li class="tabs-title '.$is_active.'"><a href="#'.$flex_content['panels'][$key]['panel_id'].'" aria-selected="true">'.$panel['panel_title'].'</a></li>';
+      }
+      $output .= '</ul>';
+      $output .= '</div>';
+
+      $output .= '<div class="medium-9 columns">';
+      $output .= '<div class="tabs-content vertical" data-tabs-content="'.$tab_group_id.'">';
+      foreach ($flex_content['panels'] as $key => $panel) {
+        $is_active = ($panel['panel_open_by_default']) ? 'is-active' : '';
+        $output .= '<div class="tabs-panel '.$is_active.'" id="'.$flex_content['panels'][$key]['panel_id'].'">';
+        $output .= apply_filters('the_content', $panel['panel_content']);
+        $output .= '</div>';
+      }
+      $output .= '</div>';
+      $output .= '</div>';
+
+    } else {
+      // Tabs Are Horizontal
+      $output .= '<div class="small-12 columns">';
+      $output .= '<ul class="tabs" data-tabs '.$collapsable.' id="'.$tab_group_id.'">';
+      foreach ($flex_content['panels'] as $key => $panel) {
+        $is_active = ($panel['panel_open_by_default']) ? 'is-active' : '';
+        $flex_content['panels'][$key]['panel_id'] = uniqid();
+        $output .= '<li class="tabs-title '.$is_active.'"><a href="#'.$flex_content['panels'][$key]['panel_id'].'" aria-selected="true">'.$panel['panel_title'].'</a></li>';
+      }
+      $output .= '</ul>';
+      $output .= '</div>';
+
+      $output .= '<div class="small-12 columns">';
+      $output .= '<div class="tabs-content" data-tabs-content="'.$tab_group_id.'">';
+      foreach ($flex_content['panels'] as $key => $panel) {
+        $is_active = ($panel['panel_open_by_default']) ? 'is-active' : '';
+        $output .= '<div class="tabs-panel '.$is_active.'" id="'.$flex_content['panels'][$key]['panel_id'].'">';
+        $output .= apply_filters('the_content', $panel['panel_content']);
+        $output .= '</div>';
+      }
+      $output .= '</div>';
+      $output .= '</div>';
+    }
+  }
+  $output .= '</div>';
+  $output .= '</section>';
+  return $output;
+}
+//---------------------------------------------------------------
+function flex_thumbnail_gallery($flex_content) {
+  $output = '';
+  $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
+  $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $output .= '<section class="layout-section accordion_group '.$space_before.' '.$space_after.'">';
+  if($flex_content['gallery']) {
+    $output .= '<div class="row small-up-2 medium-up-3 large-up-6">';
+    $lightbox_group_id = uniqid();
+    foreach ($flex_content['gallery'] as $image) {
+      $output .= '<div class="column column-block">';
+      $output .= '<a href="'.$image['url'].'" data-imagelightbox="'.$lightbox_group_id.'"><img src="'.$image['sizes']['thumbnail'].'" alt="'.$image['alt'].'"></a>';
+      $output .= '</div>';
+    }
+    $output .= '</div>';
+  }
+  $output .= '</section>';
   return $output;
 }

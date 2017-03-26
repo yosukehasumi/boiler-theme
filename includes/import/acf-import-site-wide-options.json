@@ -28,7 +28,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -46,7 +46,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -54,7 +54,9 @@
                 "placeholder": "555.555.5555",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf1da1ecfa",
@@ -65,7 +67,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -73,7 +75,9 @@
                 "placeholder": "1.800.555.5555",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf1ec1ecfb",
@@ -84,7 +88,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -92,7 +96,9 @@
                 "placeholder": "555.555.5555",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf1fc1ecfc",
@@ -103,7 +109,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -111,7 +117,9 @@
                 "placeholder": "#205 - 4836 Oak Street",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf2101ecfd",
@@ -122,7 +130,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -130,7 +138,9 @@
                 "placeholder": "Courtenay",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf21e1ecfe",
@@ -141,7 +151,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -149,7 +159,9 @@
                 "placeholder": "British Columbia",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf22e1ecff",
@@ -160,7 +172,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -168,7 +180,9 @@
                 "placeholder": "Canada",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf2401ed00",
@@ -179,7 +193,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -187,7 +201,9 @@
                 "placeholder": "V9N 1L2",
                 "prepend": "",
                 "append": "",
-                "maxlength": ""
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
             },
             {
                 "key": "field_58bdf1521ecf6",
@@ -214,7 +230,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -230,7 +246,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -246,7 +262,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -262,7 +278,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -278,7 +294,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -294,7 +310,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -310,7 +326,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -326,7 +342,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -342,7 +358,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -358,7 +374,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -374,7 +390,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -390,7 +406,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -406,7 +422,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -422,7 +438,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -438,7 +454,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },
@@ -454,7 +470,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": 50,
                     "class": "",
                     "id": ""
                 },

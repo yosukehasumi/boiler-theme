@@ -15,6 +15,9 @@
       </div><!-- .columns -->
     </div><!-- .row -->
   </section>
+
+  <?php echo get_flex_content(); ?>
+
 </article>
 </main>
 <?php get_footer(); ?>
