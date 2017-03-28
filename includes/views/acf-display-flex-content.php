@@ -230,7 +230,7 @@ function flex_thumbnail_gallery($flex_content) {
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section accordion_group '.$space_before.' '.$space_after.'">';
+  $output .= '<section class="layout-section thumbnail_gallery '.$space_before.' '.$space_after.'">';
   if($flex_content['gallery']) {
     $output .= '<div class="row small-up-2 medium-up-3 large-up-6">';
     $lightbox_group_id = uniqid();
