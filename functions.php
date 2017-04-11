@@ -33,6 +33,24 @@ function enqueue_custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );
 //---------------------------------------------------------------
 /**
+ * Customizing WP Login Page
+ */
+function enqueue_login_stylesheet() {
+  wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
+  // wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/style-login.js' );
+}
+add_action( 'login_enqueue_scripts', 'enqueue_login_stylesheet' );
+function change_login_logo_url() {
+  return home_url();
+}
+add_filter( 'login_headerurl', 'change_login_logo_url' );
+
+function change_login_logo_url_title() {
+  return get_bloginfo('name');
+}
+add_filter( 'login_headertitle', 'change_login_logo_url_title' );
+//---------------------------------------------------------------
+/**
  * Register WP Menu Locations
  */
 register_nav_menus( array(

@@ -5,6 +5,17 @@
 // $subnav: #C4CECD;
 // $subnavHover: #708688;
 // $richblue: #00827f;
+$light-grey: #e6e6e6;
+$medium-grey: #cacaca;
+$dark-grey: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+
+$primary-color: #1779ba;
+$secondary-color: #767676;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #cc4b37;
 
 //---------------------------------------------------------------
 // General Options
@@ -21,15 +32,4 @@ $sub_nav_hover: $hover;
 
 //---------------------------------------------------------------
 // Buttons
-$button_color: #000;
-
-//---------------------------------------------------------------
-// Breakpoints
-
-
-
-// Define your breakpoints here
-$break-small: 640px;
-$break-medium: 960px;
-$break-large: 1200px;
 
