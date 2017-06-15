@@ -9,13 +9,10 @@
 	<title><?php wp_title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.png">
-	<!--[if lt IE 9]><script src="<?php bloginfo('stylesheet_directory'); ?>/js/html5shiv.js"></script><![endif]-->
-
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <!--[if lt IE 9]>
+  <!--[if IE]>
     <div class="browsehappy" style="background-color: #B71C1C; color: white; position:fixed; top: 0; left:0; width: 100%; padding:10px; text-align:center; font-family: sans-serif;" onclick="this.style.display='none';">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank" style="color: #64B5F6;">upgrade your browser</a> to improve your experience.</div>
   <![endif]-->
   <header id="site_header">
