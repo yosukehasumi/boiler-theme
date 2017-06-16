@@ -1,10 +1,5 @@
 <?php
 //---------------------------------------------------------------
-# create an options page
-if( function_exists('acf_add_options_page') ) {
-  acf_add_options_page();
-}
-//---------------------------------------------------------------
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
