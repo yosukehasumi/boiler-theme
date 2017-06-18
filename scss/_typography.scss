@@ -10,6 +10,12 @@
 // @mixin h4 {
 //   font-size: 1em;
 // }
+// @mixin h5 {
+//   font-size: 1em;
+// }
+// @mixin h6 {
+//   font-size: 1em;
+// }
 // @mixin p  {
 //   font-size: 1em;
 // }
@@ -24,6 +30,8 @@
 // h2, .h2       { @include h2; }
 // h3, .h3       { @include h3; }
 // h4, .h4       { @include h4; }
+// h5, .h5       { @include h5; }
+// h6, .h6       { @include h6; }
 // p , .p        { @include p;  }
 // small, .small { @include small; }
 // ul            { @include p;}
