@@ -1,14 +1,35 @@
+//---------------------------------------------------------------
+// Color Swatches
 // $charcoal: #231f20;
 // $blue: #98c0c3;
-// $link: $blue;
-// $hover: #374344;
-// $active: #8CADAD;
 // $subnav: #C4CECD;
 // $subnavHover: #708688;
 // $richblue: #00827f;
+$light-grey: #e6e6e6;
+$medium-grey: #cacaca;
+$dark-grey: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
 
-// Define your breakpoints here
-$break-small: 640px;
-$break-medium: 960px;
-$break-large: 1200px;
+$primary-color: #1779ba;
+$secondary-color: #767676;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #cc4b37;
+
+//---------------------------------------------------------------
+// General Options
+
+
+//---------------------------------------------------------------
+// Links + Navigation
+$link: #C4CECD;
+$hover: #708688;
+$nav: $link;
+$nav_hover: $hover;
+$sub_nav: $link;
+$sub_nav_hover: $hover;
+
+//---------------------------------------------------------------
+// Buttons
 

@@ -1,0 +1,21 @@
+body {
+  background-color: #fafafa;
+  /*background-image: url(./images/pattern.jpg);*/
+  /*background-size: cover;*/
+}
+#login h1 a, .login h1 a {
+  /*background-image: url(./images/logo.png);*/
+  /*height: 110px;*/
+  /*width: 320px;*/
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+.login #backtoblog a, .login #nav a {
+  text-decoration: none;
+  /*color: #8a8a8a;*/
+}
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+  /*color: #00644d;*/
+}

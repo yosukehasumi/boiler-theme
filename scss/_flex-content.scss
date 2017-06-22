@@ -1,0 +1,27 @@
+section.layout-section {
+  &.one_column {}
+  &.two_columns {}
+  &.three_columns {}
+  &.two_columns_sidebar_left {}
+  &.two_columns_sidebar_right {}
+  &.hero_slider {}
+  &.thumbnail_gallery {}
+}
+.space_before_none {
+  margin-top: 0;
+}
+.space_before_normal {
+  margin-top: 3rem;
+}
+.space_before_extra {
+  margin-top: 6rem;
+}
+.space_after_none {
+  margin-bottom: 0;
+}
+.space_after_normal {
+  margin-bottom: 3rem;
+}
+.space_after_extra {
+  margin-bottom: 6rem;
+}
