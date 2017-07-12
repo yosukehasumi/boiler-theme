@@ -486,6 +486,22 @@ acf_add_local_field_group(array (
       'placeholder' => '',
     ),
     array (
+      'key' => 'field_bada21b4eae91',
+      'label' => 'Foursquare URL',
+      'name' => 'options_foursquare_url',
+      'type' => 'url',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => 50,
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+    ),
+    array (
       'key' => 'field_58bdf1761ecf7',
       'label' => 'Other',
       'name' => '',

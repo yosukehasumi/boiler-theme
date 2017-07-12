@@ -28,7 +28,7 @@
         edit_post_link(
           sprintf(
             wp_kses(
-              __( 'Edit <span class="screen-reader-text">%s</span>' ),
+              __( 'Edit <span class="show-for-sr">%s</span>' ),
               array(
                 'span' => array(
                   'class' => array(),
