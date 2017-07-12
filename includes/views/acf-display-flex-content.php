@@ -44,7 +44,15 @@ function flex_full_width($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section one_column '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section one_column '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 columns">';
   $output .= apply_filters( 'the_content', $flex_content['column1'] );
@@ -58,7 +66,15 @@ function flex_two_col($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section two_columns '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section two_columns '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-6 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-6 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -71,7 +87,15 @@ function flex_three_col($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section three_columns '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section three_columns '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -85,7 +109,15 @@ function flex_two_columns_sidebar_left($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section two_columns_sidebar_left '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section two_columns_sidebar_left '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-8 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -98,7 +130,15 @@ function flex_two_columns_sidebar_right($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section two_columns_sidebar_right '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section two_columns_sidebar_right '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 medium-8 columns">'.apply_filters( 'the_content', $flex_content['column1'] ).'</div>';
   $output .= '<div class="small-12 medium-4 columns">'.apply_filters( 'the_content', $flex_content['column2'] ).'</div>';
@@ -111,8 +151,9 @@ function flex_hero_slider($flex_content){
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
   if(count($flex_content['slides']) > 0) {
-    $output .= '<section class="layout-section hero_slider '.$space_before.' '.$space_after.'">';
+    $output .= '<section class="layout-section hero_slider '.$space_before.' '.$space_after.' '.$section_highlight.'">';
     $output .= '<div class="row">';
     $output .= '<div class="hero-slider cycle-slideshow" data-cycle-auto-height="container" data-cycle-fx="scrollHorz" data-cycle-timeout="8000" data-cycle-slides="> div.hero-slide">';
     foreach ($flex_content['slides'] as $slide) {
@@ -143,7 +184,15 @@ function flex_accordion_group($flex_content) {
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section accordion_group '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section accordion_group '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   $output .= '<div class="small-12 columns">';
   if($flex_content['panels']) {
@@ -169,7 +218,15 @@ function flex_tab_group($flex_content) {
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section tab_group '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section tab_group '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '<div class="row">';
   if($flex_content['panels']) {
     $tab_group_id = uniqid();
@@ -230,7 +287,15 @@ function flex_thumbnail_gallery($flex_content) {
   $output = '';
   $space_before = (!empty($flex_content['space_before'])) ? 'space_before_'.$flex_content['space_before'] : '';
   $space_after = (!empty($flex_content['space_after'])) ? 'space_after_'.$flex_content['space_after'] : '';
-  $output .= '<section class="layout-section thumbnail_gallery '.$space_before.' '.$space_after.'">';
+  $section_highlight = (!empty($flex_content['section_highlight']) && $flex_content['section_highlight'] != "none") ? 'padded section_highlight_'.$flex_content['section_highlight'] : '';
+  $output .= '<section class="layout-section thumbnail_gallery '.$space_before.' '.$space_after.' '.$section_highlight.'">';
+  if(!empty($flex_content['section_title'])) {
+    $output .= '<div class="row">';
+    $output .= '<div class="small-12 columns">';
+    $output .= '<h3 class="section-title">'.$flex_content['section_title'].'</h3>';
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   if($flex_content['gallery']) {
     $output .= '<div class="row small-up-2 medium-up-3 large-up-6">';
     $lightbox_group_id = uniqid();

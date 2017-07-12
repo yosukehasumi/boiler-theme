@@ -44,7 +44,6 @@ gulp.task('foundation-js', function () {
 
 gulp.task('library', function () {
   gulp.src([
-      // stylesheet_dir + '/js/library/jquery-2.1.4.min.js',
       stylesheet_dir + '/js/library/what-input.min.js',
       stylesheet_dir + '/js/foundation.js',
       stylesheet_dir + '/js/library/*.js',
