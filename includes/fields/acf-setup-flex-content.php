@@ -132,7 +132,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -287,7 +287,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -461,7 +461,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -616,7 +616,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -771,7 +771,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -996,7 +996,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -1193,7 +1193,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -1431,7 +1431,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -1569,7 +1569,7 @@ acf_add_local_field_group(array (
               'label' => 'Section Highlight',
               'name' => 'section_highlight',
               'type' => 'select',
-              'instructions' => '',
+              'instructions' => 'To show a color highlight behind this layout section, select the theme here.',
               'required' => 0,
               'conditional_logic' => 0,
               'wrapper' => array (
