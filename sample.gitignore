@@ -29,6 +29,7 @@ Thumbs.db
 
 # WordPress #
 ############
+/.htaccess
 #wp-config.php
 wp-config-local.php
 wp-cli.local.yml
