@@ -1,6 +1,5 @@
 //---------------------------------------------------------------
 // var stylesheet_dir = "path/to/theme"
-var stylesheet_dir = "wp-content/themes/mriboilertheme"
 
 //---------------------------------------------------------------
 // modules
