@@ -37,12 +37,25 @@ these versions._
 ## Branches
 There are a couple branches for flavours of this boiler theme. As theme has
 matured there has been the need to also allow for some trimmed down versions.
-- **[[master]](https://github.com/yosukehasumi/boiler-theme)** is our current, everyday toolbox
-- **[[foundation]](https://github.com/yosukehasumi/boiler-theme/tree/foundation)** is that same toolbox with the addion of the
+- **[[master]](https://github.com/yosukehasumi/boiler-theme)** is our current,
+everyday toolbox
+- **[[foundation]](https://github.com/yosukehasumi/boiler-theme/tree/foundation)**
+is that same toolbox with the addion of the
 Foundation CSS/JS framework
-- **[[bare-bones]](https://github.com/yosukehasumi/boiler-theme/tree/bare-bones)** has just the basic folder and template structure
-- **[[original-build]](https://github.com/yosukehasumi/boiler-theme/tree/original-build)** harkens back to where it all began
+- **[[bare-bones]](https://github.com/yosukehasumi/boiler-theme/tree/bare-bones)**
+has just the basic folder and template structure
+- **[[original-build]](https://github.com/yosukehasumi/boiler-theme/tree/original-build)**
+harkens back to where it all began
 
+## Development Environment Mode
+
+Adding the following like to your `wp-config.php` or `wp-config-local.php`
+will enabled / disable some select features that are otherwise configured
+for the production environment.
+
+`$_ENV['MRI_ENVIRONMENT'] == 'development';`
+
+## File Structure
 ### ./includes/
 
 Here lies additional functions, filters and configuration files.
@@ -82,6 +95,11 @@ libraries or custom JS scripts.
 
 This is the folder where we place JS libraries we wish to include
 in our project.
+
+### ./js/src/
+
+This is a dynamic folder containing the interim compiled libraries. _Do not
+edit these files directly!_
 
 ### ./js/coffee/
 

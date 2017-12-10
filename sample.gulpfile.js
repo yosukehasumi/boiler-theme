@@ -39,7 +39,7 @@ gulp.task('includes', function () {
 });
 
 gulp.task('javascript', function () {
-  var includesStream = gulp.src(stylesheet_dir + '/js/includes.js');
+  var includesStream = gulp.src(stylesheet_dir + '/js/src/*.js');
 
   var coffeeStream = gulp.src(stylesheet_dir + '/js/coffee/master.coffee')
     .pipe(coffee({bare: true}).on('error', gutil.log));
@@ -60,7 +60,7 @@ gulp.task('minify', function () {
 // watch
 gulp.task('default', function () {
   gulp.watch(stylesheet_dir + '/scss/**/*.scss', ['scss']);
-  gulp.watch(stylesheet_dir + '/js/required/**/*.js', ['includes']);
-  gulp.watch(stylesheet_dir + '/js/includes/**/*.js', ['includes']);
+  gulp.watch(stylesheet_dir + '/js/required/**/*.js', ['includes', 'javascript', 'minify']);
+  gulp.watch(stylesheet_dir + '/js/includes/**/*.js', ['includes', 'javascript', 'minify']);
   gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript', 'minify']);
 });
