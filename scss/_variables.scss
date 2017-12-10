@@ -1,15 +1,17 @@
+// _variables.scss
 //---------------------------------------------------------------
 // Color Swatches
-// $charcoal: #231f20;
-// $blue: #98c0c3;
-// $subnav: #C4CECD;
-// $subnavHover: #708688;
-// $richblue: #00827f;
-$light-grey: #e6e6e6;
-$medium-grey: #cacaca;
-$dark-grey: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$lighter-grey: #f2f2f2; // 95%
+$light-grey: #e6e6e6; // 90%
+$medium-light-grey: #d9d9d9; // 85%
+$medium-grey: #bfbfbf; // 75%
+$medium-dark-grey: #a6a6a6; // 65%
+$dark-grey: #8c8c8c; // 55%
+$darker-grey: #262626; // 15%
+$off-black: #0e0e0e; // 5%
+$black: #000000;
+$off-white: #fefefe;
+$white: #ffffff;
 
 $primary-color: #1779ba;
 $secondary-color: #767676;
@@ -23,8 +25,8 @@ $alert-color: #cc4b37;
 
 //---------------------------------------------------------------
 // Links + Navigation
-$link: #C4CECD;
-$hover: #708688;
+$link: $primary-color;
+$hover: darken($primary-color, 10%);
 $nav: $link;
 $nav_hover: $hover;
 $sub_nav: $link;

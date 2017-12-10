@@ -10,13 +10,12 @@ var autoprefixer  = require('gulp-autoprefixer');
 var coffee        = require('gulp-coffee');
 var minifyCSS     = require('gulp-clean-css');
 var uglify        = require('gulp-uglify');
-var babel         = require('gulp-babel');
 var concat        = require('gulp-concat');
 var merge2        = require('merge2');
 
 //---------------------------------------------------------------
 // To install the needed modules run this command:
-// npm install gulp gulp-util gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-babel gulp-concat merge2 babel-preset-es2015 --save-dev
+// npm install gulp gulp-util gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-concat merge2 --save-dev
 
 //---------------------------------------------------------------
 // tasks
@@ -30,37 +29,30 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(stylesheet_dir + '/'));
 });
 
-gulp.task('foundation-js', function () {
+gulp.task('includes', function () {
   gulp.src([
-      stylesheet_dir + '/js/foundation-js/enabled/foundation.core.js',
-      stylesheet_dir + '/js/foundation-js/enabled/foundation.util.*.js',
-      stylesheet_dir + '/js/foundation-js/enabled/*.js',
+      stylesheet_dir + '/js/required/*.js',
+      stylesheet_dir + '/js/includes/*.js',
     ])
-    .pipe(babel({presets: ['es2015'], compact: true}))
-    .pipe(concat('foundation.js'))
-    .pipe(gulp.dest(stylesheet_dir + '/js/'));
-});
-
-gulp.task('library', function () {
-  gulp.src([
-      stylesheet_dir + '/js/library/what-input.min.js',
-      stylesheet_dir + '/js/foundation.js',
-      stylesheet_dir + '/js/library/*.js',
-    ])
-    .pipe(concat('library.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(stylesheet_dir + '/js/'));
+    .pipe(concat('includes.js'))
+    .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
 });
 
 gulp.task('javascript', function () {
-  var includesStream = gulp.src(stylesheet_dir + '/js/library.js');
+  var includesStream = gulp.src(stylesheet_dir + '/js/includes.js');
 
   var coffeeStream = gulp.src(stylesheet_dir + '/js/coffee/master.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(uglify());
+    .pipe(coffee({bare: true}).on('error', gutil.log));
 
   merge2(includesStream, coffeeStream)
     .pipe(concat('site.js'))
+    .pipe(gulp.dest(stylesheet_dir + '/js/'));
+});
+
+gulp.task('minify', function () {
+  var siteMinStream = gulp.src(stylesheet_dir + '/js/site.js')
+    .pipe(uglify())
+    .pipe(concat('site.min.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/'));
 });
 
@@ -68,6 +60,7 @@ gulp.task('javascript', function () {
 // watch
 gulp.task('default', function () {
   gulp.watch(stylesheet_dir + '/scss/**/*.scss', ['scss']);
-  gulp.watch(stylesheet_dir + '/js/library/**/*.js', ['foundation-js','library']);
-  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript']);
+  gulp.watch(stylesheet_dir + '/js/required/**/*.js', ['includes']);
+  gulp.watch(stylesheet_dir + '/js/includes/**/*.js', ['includes']);
+  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript', 'minify']);
 });

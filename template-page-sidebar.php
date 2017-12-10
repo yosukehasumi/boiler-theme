@@ -1,9 +1,12 @@
+<?php
+/**
+ * Template Name: Page w. Sidebar
+ */
+?>
 <?php get_header(); ?>
 <main class="page-content">
-
   <?php if(have_posts()) : ?>
     <?php while(have_posts()) : the_post(); ?>
-
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="post-header">
@@ -25,9 +28,10 @@
         <?php echo get_flex_content(); ?>
 
       </article>
-
     <?php endwhile; ?>
   <?php endif; ?>
-
 </main>
+
+<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

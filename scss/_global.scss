@@ -1,4 +1,6 @@
+// _global.scss
 .uppercase        {text-transform: uppercase;}
+.lowercase        {text-transform: lowercase;}
 .italic           {font-style: italic;}
 .bold             {font-weight: 700;}
 .line-height-none {line-height: 0;}
@@ -13,6 +15,7 @@
 
 img.alignleft  {width: initial; float: left; margin-right: 1em;}
 img.alignright {width: initial; float: right; margin-left: 1em;}
+img.aligncenter {margin: 0 auto 1em;}
 
 .display-block        {display: block;}
 .display-inline-block {display: inline-block;}

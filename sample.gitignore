@@ -52,7 +52,7 @@ wp-content/backups/
 *.DS_Store
 .AppleDouble
 .LSOverride
-Icon?
+Icon[\r]
 ._*
 .DocumentRevisions-V100
 .fseventsd
@@ -87,9 +87,4 @@ node_modules/
 
 # Site-Custom (eliminate these) #
 #################################
-wp-content/banners
-/migration-scripts/
-wp-content/themes/pen/migration/data
-wp-content/themes/pen-archive/js/assets/application.coffee
 !wp-tinymce.js.gz
-wp-content/mmr/

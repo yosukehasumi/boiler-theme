@@ -1,40 +1,51 @@
 <?php
-# include ACF setup functions
-require_once 'includes/fields/acf-setup-options.php';
-require_once 'includes/fields/acf-setup-flex-content.php';
-# include ACF display functions
-require_once 'includes/views/acf-display-options.php';
-require_once 'includes/views/acf-display-flex-content.php';
-# include other functions
+//---------------------------------------------------------------
+// Include External Field Configurations and Display Functions
+
+# Include ACF setup functions
+require_once 'includes/acf-fields/acf-setup-options.php';
+require_once 'includes/acf-fields/acf-setup-flex-content.php';
+# Include ACF display functions
+require_once 'includes/acf-views/acf-display-options.php';
+require_once 'includes/acf-views/acf-display-flex-content.php';
+# Include other functions
 require_once 'includes/admin-functions.php';
 require_once 'includes/display-functions.php';
 
 //---------------------------------------------------------------
+// Enqueue Stylesheet and JavaScript
+
 function enqueue_custom_scripts() {
   # I remove jquery since I bundle it in with gulp.
+  # NOTE: This may interfere with some third-party plugins.
   // wp_deregister_script('jquery');
 
-  # Get File Modified Date for Stylesheet and Enqueue
+  # Get file modified date for stylesheet and enqueue
   $site_style_mtime = filemtime(get_template_directory().'/style.css');
   wp_enqueue_style( 'site-style', get_stylesheet_uri(), false, $site_style_mtime );
 
-  # Get File Modified Date for Site JS and Register
-  $site_js_mtime = filemtime(get_template_directory().'/js/site.js');
-  wp_register_script( 'site-js', get_template_directory_uri() . '/js/site.js', array('jquery'), $site_js_mtime, true );
-
-  # add local variables that might be helpful
-  // wp_localize_script( 'site', 'Site', array(
+  # Get file modified date for site JS and register
+  if(isset($_ENV['MRI_ENVIRONMENT']) && $_ENV['MRI_ENVIRONMENT'] == 'development' ) {
+    $site_js_mtime = filemtime(get_template_directory().'/js/site.js');
+    wp_register_script( 'site-js', get_template_directory_uri() . '/js/site.js', array('jquery'), $site_js_mtime, true );
+  }else {
+    $site_js_mtime = filemtime(get_template_directory().'/js/site.min.js');
+    wp_register_script( 'site-js', get_template_directory_uri() . '/js/site.min.js', array('jquery'), $site_js_mtime, true );
+  }
+  # Add local variables that might be helpful
+  // wp_localize_script( 'site-js', 'Site', array(
+  //   'ajax_url' => admin_url( 'admin-ajax.php' )
   //   'home_url' => home_url(),
   // ));
 
-  # now enqueue it.
+  # Now Enqueue It!
   wp_enqueue_script( 'site-js' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts' );
+
 //---------------------------------------------------------------
-/**
- * Customizing WP Login Page
- */
+// Customizing WP Login Page
+
 function enqueue_login_stylesheet() {
   wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
   // wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/style-login.js' );
@@ -49,19 +60,19 @@ function change_login_logo_url_title() {
   return get_bloginfo('name');
 }
 add_filter( 'login_headertitle', 'change_login_logo_url_title' );
+
 //---------------------------------------------------------------
-/**
- * Register WP Menu Locations
- */
+// Register WP Menu Locations
+
 register_nav_menus( array(
   'primary' => esc_html__( 'Primary Menu' ),
   'mobile-quick-links' => esc_html__( 'Mobile Quick Links' ),
   'footer' => esc_html__( 'Footer Menu' ),
-  ) );
+) );
+
 //---------------------------------------------------------------
-/**
- * Register Sidebars
- */
+// Register Sidebars
+
 function register_sidebar_locations() {
   register_sidebar( array(
     'name'          => esc_html__( 'Blog Sidebar'),
@@ -71,13 +82,14 @@ function register_sidebar_locations() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-    ) );
+  ) );
 }
 add_action( 'widgets_init', 'register_sidebar_locations' );
-//---------------------------------------------------------------
 
-# Handy function for registering new post types
-# dashicons can be found here: https://developer.wordpress.org/resource/dashicons/
+//---------------------------------------------------------------
+// Register Custom Post Type(s)
+// Dashicons can be found here: https://developer.wordpress.org/resource/dashicons/
+
 // function register_post_types() {
 //   $args = array(
 //     'public' => true,
@@ -91,6 +103,7 @@ add_action( 'widgets_init', 'register_sidebar_locations' );
 
 //---------------------------------------------------------------
 // Define the WP default image sizes
+
 update_option( 'thumbnail_size_w', 200 );
 update_option( 'thumbnail_size_h', 200 );
 update_option( 'thumbnail_crop', 1 );
@@ -102,19 +115,21 @@ update_option( 'large_size_h', 1200 );
 update_option( 'large_crop', 0 );
 
 //---------------------------------------------------------------
-# Define image sizes, make sure big goes at the top
-# [image-name] => array( [width], [height], [crop])
-# When adding a new image size, remember to update
-# the placeholder image function.
+// Define image sizes, make sure big goes at the top
+// [image-name] => array( [width], [height], [crop])
+// When adding a new image size, remember to update
+// the placeholder image function.
+
 // $image_sizes = array(
 //   'image-banner'  => array(1920, 864, true),
 //   'hero-slide'    => array(1920, 1056,  true),
 //   'feature-tile'  => array(600, 400,  true),
 // );
 
-//---------------------------------------------------------------
 # Register each of the images from the array above
+
 // foreach($image_sizes as $name => $attr){
 //   add_image_size( $name, $attr[0], $attr[1], $attr[2]);
 // }
+
 //---------------------------------------------------------------

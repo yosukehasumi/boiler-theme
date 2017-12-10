@@ -1,43 +1,56 @@
 <?php
 /**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- */
+* The template for displaying search results pages
+*
+* @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+*
+*/
 get_header(); ?>
-<div class="row">
-  <div class="small-12 medium-8 columns">
-   <section id="primary" class="content-area">
-     <main id="main" class="site-main" role="main">
+<main class="page-content">
 
-       <?php
-       if ( have_posts() ) : ?>
+  <?php if ( have_posts() ) : ?>
 
-       <header class="page-header">
-         <h1 class="page-title"><?php
-           printf( esc_html__( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' );
-           ?></h1>
-         </header><!-- .page-header -->
+    <header class="page-header">
+      <h1 class="page-title">
+        <?php printf( esc_html__( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?>
+      </h1>
+    </header><!-- .page-header -->
 
-         <?php
-         /* Start the Loop */
-         while ( have_posts() ) : the_post();
-         get_template_part( 'template-parts/content', 'search' );
-         endwhile;
-         the_posts_navigation();
-         else :
-           get_template_part( 'template-parts/content', 'none' );
-         endif; ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-       </main><!-- #main -->
-     </section><!-- #primary -->
-   </div><!-- .columns -->
-   <div class="small-12 medium-4 columns">
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header class="entry-header">
+          <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-    <?php get_sidebar(); ?>
+          <?php if ( 'post' === get_post_type() ) : ?>
+            <div class="entry-meta">
+              <?php echo(get_the_date()); ?>
+            </div><!-- .entry-meta -->
+          <?php endif; ?>
+        </header><!-- .entry-header -->
 
-  </div><!-- .columns -->
-</div><!-- .row -->
+        <div class="entry-summary">
+          <?php the_excerpt(); ?>
+        </div><!-- .entry-summary -->
+
+        <footer class="entry-footer">
+          <?php echo(get_the_category_list('<p>POSTED IN: ',', ','</p>')); ?>
+          <?php echo(get_the_tag_list('<p>TAGS: ',', ','</p>')); ?>
+        </footer><!-- .entry-footer -->
+      </article><!-- #post-<?php the_ID(); ?> -->
+
+    <?php endwhile; ?>
+
+    <?php the_posts_navigation(); ?>
+
+  <?php else : ?>
+
+    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+  <?php endif; ?>
+
+</main><!-- #main -->
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

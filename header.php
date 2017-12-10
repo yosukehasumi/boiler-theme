@@ -10,28 +10,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <!--[if IE]>
 <div class="browsehappy" style="background-color: #B71C1C; color: white; position:fixed; top: 0; left:0; width: 100%; padding:10px; text-align:center; font-family: sans-serif;" onclick="this.style.display='none';">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank" style="color: #64B5F6;">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-<header id="site_header">
-  <div class="row">
-    <div class="small-10 medium-6 columns">
-      <a href="<?php echo home_url(); ?>" id="logo_link" class="sprite" title="<?php bloginfo(); ?>"><img src="<?php echo(get_template_directory_uri().'/images/logo.png'); ?>" alt="<?php bloginfo(); ?>"></a>
-    </div><!-- .columns -->
-    <div class="small-2 columns text-right hide-for-medium">
-      <button id="mobile-nav-toggle-button">MENU <i class="fa fa-bars" aria-hidden="true"></i></button>
-    </div><!-- .columns -->
-    <div class="small-12 medium-6 columns show-for-medium">
-      <nav id="header-navigation" class="site-navigation">
-        <?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
-      </nav>
-    </div><!-- .columns -->
-    <div class="small-12 columns hide-for-medium">
-      <nav id="mobile-navigation" class="site-navigation">
-        <?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
-      </nav>
-    </div><!-- .columns -->
-  </div><!-- .row -->
+<header id="site-header">
+
+  <a href="<?php echo home_url(); ?>" id="logo_link" class="sprite" title="<?php bloginfo(); ?>"><img src="<?php echo(get_template_directory_uri().'/images/logo.png'); ?>" alt="<?php bloginfo(); ?>"></a>
+
+  <button id="mobile-nav-toggle-button">MENU <i class="fa fa-bars" aria-hidden="true"></i></button>
+
+  <nav id="header-navigation" class="site-navigation">
+    <?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
+  </nav>
+
+  <nav id="mobile-navigation" class="site-navigation">
+    <?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>
+  </nav>
+
 </header>
