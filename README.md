@@ -9,7 +9,8 @@ https://gist.github.com/yosukehasumi/d21f3ed89171ea5fc234
 If you are on Mac, Yosuke created a handy bash script that can create a new WP
 site for you from scratch, see my gist here:
 https://gist.github.com/yosukehasumi/d0c905da78229122e7c1bb34a0fc92a7
-**_Updated_**
+
+**_Updated:_**
 https://gist.github.com/nathanieltubb/43b86d3f056bf2b8148e21c7756bfece
 
 ## What You'll Need
@@ -30,17 +31,17 @@ https://gist.github.com/nathanieltubb/43b86d3f056bf2b8148e21c7756bfece
 - [IsotopeJS](https://isotope.metafizzy.co/)
 
 \* _This theme currently uses Foundation v6.3.x, while the current documentation
-the Foundation site is for >= 6.4.x. There may be some discrepencies between
+on the Foundation site is for >= 6.4.x. There may be some discrepencies between
 these versions._
 
 ## Branches
 There are a couple branches for flavours of this boiler theme. As theme has
 matured there has been the need to also allow for some trimmed down versions.
-- **master** is our current, everyday toolbox
-- **foundation** is that same toolbox with the addion of the
+- **[[master]](https://github.com/yosukehasumi/boiler-theme)** is our current, everyday toolbox
+- **[[foundation]](https://github.com/yosukehasumi/boiler-theme/tree/foundation)** is that same toolbox with the addion of the
 Foundation CSS/JS framework
-- **theme-core-only** has just the basic folder and template structure
-- **original-build** harkens back to where it all began
+- **[[bare-bones]](https://github.com/yosukehasumi/boiler-theme/tree/bare-bones)** has just the basic folder and template structure
+- **[[original-build]](https://github.com/yosukehasumi/boiler-theme/tree/original-build)** harkens back to where it all began
 
 ### ./includes/
 
