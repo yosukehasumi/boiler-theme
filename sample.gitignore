@@ -1,5 +1,53 @@
-# OSX #
-############
+# Standard gitignore
+
+# Always Keep #
+###############
+!.gitignore
+
+# WordPress #
+#############
+wp-config.php
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/updraft/
+wp-content/backupwordpress-*/
+wp-content/managewp/backups/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+sitemap.xml
+sitemap.xml.gz
+*.log
+/.htaccess
+
+# Writeable Paths #
+###################
+wp-content/cache/
+wp-content/backups/
+
+# File Archives #
+#################
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
 .DS_Store*
 *.DS_Store
 .AppleDouble
@@ -21,48 +69,27 @@ Temporary Items
 ehthumbs.db
 Thumbs.db
 
+# Dev Generated Files #
+#######################
+*.un~
+*.swp
+*.sublime-workspace
+*.sublime-project
 
-# SASS #
-##########
+# Server Generated Files #
+##########################
+index.nginx-debian.html
+
+# Third Party #
+###############
 .sass-cache
+node_modules/
 
-
-# WordPress #
-############
-/.htaccess
-#wp-config.php
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-wp-content/updraft/
-wp-content/backupwordpress-*/
-wp-content/managewp/backups/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-sitemap.xml
-sitemap.xml.gz
-*.log
-wp-content/cache/
-wp-content/backups/
-
-
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-
-# Logs and databases #
-######################
-*.log
-*.sql
+# Site-Custom (eliminate these) #
+#################################
+wp-content/banners
+/migration-scripts/
+wp-content/themes/pen/migration/data
+wp-content/themes/pen-archive/js/assets/application.coffee
+!wp-tinymce.js.gz
+wp-content/mmr/
