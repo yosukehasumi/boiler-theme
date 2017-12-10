@@ -10,7 +10,7 @@ function site_init() {
   // remove_post_type_support( 'post', 'tags');
 
   # Add menus support
-  // add_theme_support( 'menus' );
+  add_theme_support( 'menus' );
 
   # Add thumbnail support, define custom post types that it should apply to
   // add_theme_support( 'post-thumbnails', array('production', 'widget', 'slide', 'page', 'actor') );
@@ -19,7 +19,9 @@ function site_init() {
   update_option('image_default_link_type','none');
 
   # Hide the admin bar on the front end even when you are logged in
-  add_filter('show_admin_bar', '__return_false');
+  if(isset($_ENV['MRI_ENVIRONMENT']) && $_ENV['MRI_ENVIRONMENT'] == 'development' ) {
+    add_filter('show_admin_bar', '__return_false');
+  }
 }
 add_action( 'init', 'site_init' );
 

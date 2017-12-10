@@ -1,3 +1,4 @@
+// _mixins.scss
 //---------------------------------------------------------------
 // Fonts
 @mixin helvetica {
@@ -8,6 +9,12 @@
 }
 //---------------------------------------------------------------
 // Alignment Helpers
+@mixin xcenter {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin vcenter {
   position: relative;
   top: 50%;
@@ -28,32 +35,14 @@
 //---------------------------------------------------------------
 // Hover State Helper
 @mixin hover {
-  &:hover, &:active, &:focus {
+  &:hover, &:focus {
     @content;
   }
 }
 //---------------------------------------------------------------
-// Media Query Helpers
-@mixin respond($sizes...) {
-  @each $size in $sizes {
-    @include respond-to(#{$size}) { @content; }
-  }
-}
-
-@mixin respond-to($media) {
-  @if $media == small_only {
-    @media screen and (max-width: 39.9375em) {@content}
-  }
-  @else if $media == medium_only {
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {@content}
-  }
-  @else if $media == medium_up {
-    @media screen and (min-width: 40em) {@content}
-  }
-  @else if $media == large_only {
-    @media screen and (min-width: 64em) and (max-width: 74.9375em) {@content}
-  }
-  @else if $media == large_up {
-    @media screen and (min-width: 64em) {@content}
+// Active State Helper
+@mixin active {
+  &:active {
+    @content;
   }
 }

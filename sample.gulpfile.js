@@ -38,29 +38,33 @@ gulp.task('foundation-js', function () {
     ])
     .pipe(babel({presets: ['es2015'], compact: true}))
     .pipe(concat('foundation.js'))
-    .pipe(gulp.dest(stylesheet_dir + '/js/'));
+    .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
 });
 
-gulp.task('library', function () {
+gulp.task('includes', function () {
   gulp.src([
-      stylesheet_dir + '/js/library/what-input.min.js',
-      stylesheet_dir + '/js/foundation.js',
-      stylesheet_dir + '/js/library/*.js',
+      stylesheet_dir + '/js/required/*.js',
+      stylesheet_dir + '/js/includes/*.js',
     ])
-    .pipe(concat('library.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(stylesheet_dir + '/js/'));
+    .pipe(concat('includes.js'))
+    .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
 });
 
 gulp.task('javascript', function () {
-  var includesStream = gulp.src(stylesheet_dir + '/js/library.js');
+  var includesStream = gulp.src(stylesheet_dir + '/js/src/*.js');
 
   var coffeeStream = gulp.src(stylesheet_dir + '/js/coffee/master.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(uglify());
+    .pipe(coffee({bare: true}).on('error', gutil.log));
 
   merge2(includesStream, coffeeStream)
     .pipe(concat('site.js'))
+    .pipe(gulp.dest(stylesheet_dir + '/js/'));
+});
+
+gulp.task('minify', function () {
+  var siteMinStream = gulp.src(stylesheet_dir + '/js/site.js')
+    .pipe(uglify())
+    .pipe(concat('site.min.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/'));
 });
 
@@ -68,6 +72,8 @@ gulp.task('javascript', function () {
 // watch
 gulp.task('default', function () {
   gulp.watch(stylesheet_dir + '/scss/**/*.scss', ['scss']);
-  gulp.watch(stylesheet_dir + '/js/library/**/*.js', ['foundation-js','library']);
-  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript']);
+  gulp.watch(stylesheet_dir + '/js/foundation-js/**/*.js', ['foundation-js','includes', 'javascript', 'minify']);
+  gulp.watch(stylesheet_dir + '/js/required/**/*.js', ['includes', 'javascript', 'minify']);
+  gulp.watch(stylesheet_dir + '/js/includes/**/*.js', ['includes', 'javascript', 'minify']);
+  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript', 'minify']);
 });

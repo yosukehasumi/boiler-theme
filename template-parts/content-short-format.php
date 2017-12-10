@@ -5,13 +5,11 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  */
-
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
   <header class="entry-header">
     <?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-
     <?php if ( 'post' === get_post_type() ) : ?>
       <div class="entry-meta">
         <?php echo(get_the_date()); ?>
@@ -27,4 +25,5 @@
     <?php echo(get_the_category_list('<p>POSTED IN: ',', ','</p>')); ?>
     <?php echo(get_the_tag_list('<p>TAGS: ',', ','</p>')); ?>
   </footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

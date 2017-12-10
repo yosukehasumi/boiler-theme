@@ -237,7 +237,7 @@ class Abide {
   }
 
   /**
-   * Goes through a form to find inputs and proceeds to validate them in ways specific to their type. 
+   * Goes through a form to find inputs and proceeds to validate them in ways specific to their type.
    * Ignores inputs with data-abide-ignore, type="hidden" or disabled attributes set
    * @fires Abide#invalid
    * @fires Abide#valid
