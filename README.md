@@ -7,7 +7,7 @@ https://gist.github.com/yosukehasumi/d21f3ed89171ea5fc234
 
 ## RARE.sh
 If you are on Mac, Yosuke created a handy bash script that can create a new WP
-site for you from scratch, see my gist here:
+site for you from scratch, see his gist here:
 https://gist.github.com/yosukehasumi/d0c905da78229122e7c1bb34a0fc92a7
 
 **_Updated:_**
