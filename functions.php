@@ -4,13 +4,12 @@
 
 # Include ACF setup functions
 require_once 'includes/acf-fields/acf-setup-options.php';
-require_once 'includes/acf-fields/acf-setup-flex-content.php';
 # Include ACF display functions
 require_once 'includes/acf-views/acf-display-options.php';
-require_once 'includes/acf-views/acf-display-flex-content.php';
 # Include other functions
 require_once 'includes/admin-functions.php';
 require_once 'includes/display-functions.php';
+require_once 'includes/filters.php';
 
 //---------------------------------------------------------------
 // Enqueue Stylesheet and JavaScript
