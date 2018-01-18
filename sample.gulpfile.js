@@ -16,7 +16,7 @@ var merge2        = require('merge2');
 
 //---------------------------------------------------------------
 // To install the needed modules run this command:
-// npm install gulp gulp-util gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-babel gulp-concat merge2 babel-preset-es2015 --save-dev
+// npm install gulp gulp-sass gulp-autoprefixer gulp-coffee gulp-clean-css gulp-uglify gulp-babel gulp-concat merge2 babel-core babel-preset-env --save-dev
 
 //---------------------------------------------------------------
 // tasks
@@ -36,7 +36,7 @@ gulp.task('foundation-js', function () {
       stylesheet_dir + '/js/foundation-js/enabled/foundation.util.*.js',
       stylesheet_dir + '/js/foundation-js/enabled/*.js',
     ])
-    .pipe(babel({presets: ['es2015'], compact: true}))
+    .pipe(babel())
     .pipe(concat('foundation.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
 });
