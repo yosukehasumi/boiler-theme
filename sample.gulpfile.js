@@ -4,7 +4,7 @@
 //---------------------------------------------------------------
 // modules
 var gulp          = require('gulp');
-var gutil         = require('gulp-util');
+var log           = require('fancy-log');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var coffee        = require('gulp-coffee');
@@ -54,7 +54,7 @@ gulp.task('javascript', function () {
   var includesStream = gulp.src(stylesheet_dir + '/js/src/*.js');
 
   var coffeeStream = gulp.src(stylesheet_dir + '/js/coffee/master.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log));
+    .pipe(coffee({bare: true}).on('error', log));
 
   merge2(includesStream, coffeeStream)
     .pipe(concat('site.js'))
