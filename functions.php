@@ -10,6 +10,7 @@ require_once 'includes/acf-views/acf-display-options.php';
 require_once 'includes/acf-views/acf-display-flex-content.php';
 # Include other functions
 require_once 'includes/admin-functions.php';
+require_once 'includes/filters.php';
 require_once 'includes/display-functions.php';
 
 //---------------------------------------------------------------

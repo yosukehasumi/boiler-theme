@@ -10,6 +10,11 @@ function target($url){
   return $target;
 }
 
+function get_target($target_set){
+  if ($target_set == 1) return "_blank";
+  return '';
+}
+
 //---------------------------------------------------------------
 // Add shortcode to wrap video embeds in content and make them responsive.
 
