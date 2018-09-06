@@ -51,3 +51,15 @@ function send_yoast_seo_metabox_to_bottom() {
 
 // add_action( 'wp_ajax_my_action', 'my_action' );
 // add_action( 'wp_ajax_nopriv_my_action', 'my_action' );
+
+//---------------------------------------------------------------
+// Disable WP Responsive SRCSET on Images
+add_filter( 'wp_calculate_image_srcset', '__return_false' );
+
+//---------------------------------------------------------------
+// Add New Query Vars
+// function add_custom_query_vars( $vars ) {
+//  $vars[] = 'new_var_name';
+//  return $vars;
+// }
+// add_filter('query_vars', 'add_custom_query_vars');
