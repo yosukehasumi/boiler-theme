@@ -21,6 +21,14 @@ $alert-color: #cc4b37;
 
 //---------------------------------------------------------------
 // General Options
+$max-row-width: 1200px;
+$gutter-desktop: 20px;
+$gutter-mobile: 16px;
+$breakpoint-xsmall: 420px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 1280px;
+$breakpoint-large: 1440px;
+$breakpoint-xlarge: 1920px;
 
 
 //---------------------------------------------------------------
@@ -33,5 +41,13 @@ $sub_nav: $link;
 $sub_nav_hover: $hover;
 
 //---------------------------------------------------------------
-// Buttons
+// Typography
+// $font-family-usual: "usual",sans-serif;
+// $font-family-cronos: "cronos-pro",sans-serif;
+// $body-font-family: $font-family-cronos;
+// $heading-font-family: $font-family-usual;
+$font-weight-bold: 700;
+$font-weight-medium: 600;
+$font-weight-normal: 400;
+$font-weight-light: 300;
 

@@ -14,13 +14,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'mixins';
 @import 'global';
 @import 'typography';
+@import 'buttons';
+@import 'forms';
+@import 'grid';
+
 
 @import 'header';
 @import 'navigation';
-@import 'content';
+@import 'social-buttons';
+
 @import 'footer';
 
 // @import 'slick';
 //---------------------------------------------------------------
 // Import FontAwesome
-@import '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import '//use.fontawesome.com/releases/v5.3.1/css/all.css';

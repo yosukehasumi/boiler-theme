@@ -5,8 +5,8 @@
 function get_social_button_list() {
   $output = '';
   $social_buttons = array(
-    array('field' => 'options_facebook_url',    'icon' => 'fa-facebook-official',    'title' => 'Follow Us On Facebook'),
-    array('field' => 'options_google_plus_url', 'icon' => 'fa-google-plus-official', 'title' => 'Follow Us On Google Plus'),
+    array('field' => 'options_facebook_url',    'icon' => 'fa-facebook',    'title' => 'Follow Us On Facebook'),
+    array('field' => 'options_google_plus_url', 'icon' => 'fa-google-plus', 'title' => 'Follow Us On Google Plus'),
     array('field' => 'options_twitter_url',     'icon' => 'fa-twitter',              'title' => 'Follow Us On Twitter'),
     array('field' => 'options_linkedin_url',    'icon' => 'fa-linkedin',             'title' => 'Follow Us On LinkedIn'),
     array('field' => 'options_pinterest_url',   'icon' => 'fa-pinterest',            'title' => 'Follow Us On Pinterest'),
@@ -24,7 +24,7 @@ function get_social_button_list() {
     );
   $output .= '<ul class="social-button-list">';
   foreach ($social_buttons as $sb) {
-    if(get_field($sb['field'],'options')) {$output .= '<li><a class="social-button" href="'.get_field($sb['field'],'options').'" title="'.__($sb['title']).'" target="_blank"><i class="fa fa-fw '.$sb['icon'].'"></i></a></li>';}
+    if(get_field($sb['field'],'options')) {$output .= '<li><a class="social-button" href="'.get_field($sb['field'],'options').'" title="'.__($sb['title']).'" target="_blank"><i class="fab fa-fw '.$sb['icon'].'"></i></a></li>';}
   }
   $output .= '</ul>';
   return $output;

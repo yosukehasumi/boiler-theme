@@ -29,36 +29,12 @@
 //---------------------------------------------------------------
 // Hover State Helper
 @mixin hover {
-  &:hover, &:active, &:focus {
+  &:hover, &:focus {
     @content;
   }
 }
 //---------------------------------------------------------------
 // Media Query Helpers
-@mixin respond($sizes...) {
-  @each $size in $sizes {
-    @include respond-to(#{$size}) { @content; }
-  }
-}
-
-@mixin respond-to($media) {
-  @if $media == small_only {
-    @media screen and (max-width: 39.9375em) {@content}
-  }
-  @else if $media == medium_only {
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {@content}
-  }
-  @else if $media == medium_up {
-    @media screen and (min-width: 40em) {@content}
-  }
-  @else if $media == large_only {
-    @media screen and (min-width: 64em) and (max-width: 74.9375em) {@content}
-  }
-  @else if $media == large_up {
-    @media screen and (min-width: 64em) {@content}
-  }
-}
-
 @mixin react($from, $to) {
   @if $from == '' {
     @media screen and (max-width: $to) { @content }
@@ -69,4 +45,14 @@
   @else {
     @media screen and (min-width: $from) and (max-width: $to) { @content }
   }
+}
+//---------------------------------------------------------------
+// Functions
+@function remCalc($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+@function lhCalc($font-size, $line-height) {
+  $lhSize: $line-height / $font-size;
+  @return #{$lhSize};
 }

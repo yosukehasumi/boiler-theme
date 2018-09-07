@@ -1,0 +1,66 @@
+// _buttons.scss
+//---------------------------------------------------------------
+button, .button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.6666em 1em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  transition: all 0.25s ease-out;
+  text-align: center;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: $white;
+  text-transform: uppercase;
+  font-size: remCalc(15);
+  line-height: 1;
+  letter-spacing: 1px;
+  text-decoration: none;
+  &.expanded { width: 100%; }
+  @include react($breakpoint-medium + 1, ''){
+    font-size: remCalc(18);
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $white;
+    background-color: darken($primary-color, 5%);
+  }
+  &.small { font-size: 0.75rem; }
+  &.large { font-size: 1.25rem; }
+  &.xlarge { font-size: 1.5rem; }
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    background-color: $dark-grey !important;
+    color: $white !important;
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+  &.transparent {
+    background-color: transparent;
+    padding: 0.25em 0.5em;
+    margin: 0;
+  }
+  &.hollow {
+    background-color: transparent;
+    color: $primary-color;
+    border-color: $primary-color;
+    &:hover,&:focus {
+      color: darken($primary-color, 5%);
+      border-color: darken($primary-color, 5%);
+    }
+    &.blue {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      &:hover {
+        color: darken($secondary-color, 5%);
+        border-color: darken($secondary-color, 5%);
+      }
+    }
+  }
+}
