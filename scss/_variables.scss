@@ -42,10 +42,10 @@ $sub_nav_hover: $hover;
 
 //---------------------------------------------------------------
 // Typography
-// $font-family-usual: "usual",sans-serif;
-// $font-family-cronos: "cronos-pro",sans-serif;
-// $body-font-family: $font-family-cronos;
-// $heading-font-family: $font-family-usual;
+$font-family-sans: sans-serif;
+$font-family-serif: serif;
+$body-font-family: $font-family-serif;
+$heading-font-family: $font-family-sans;
 $font-weight-bold: 700;
 $font-weight-medium: 600;
 $font-weight-normal: 400;
