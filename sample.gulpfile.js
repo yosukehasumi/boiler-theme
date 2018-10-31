@@ -62,5 +62,6 @@ gulp.task('default', function () {
   gulp.watch(stylesheet_dir + '/scss/**/*.scss', ['scss']);
   gulp.watch(stylesheet_dir + '/js/required/**/*.js', ['includes', 'javascript', 'minify']);
   gulp.watch(stylesheet_dir + '/js/includes/**/*.js', ['includes', 'javascript', 'minify']);
-  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript', 'minify']);
+  gulp.watch(stylesheet_dir + '/js/coffee/**/*.coffee', ['javascript']);
+  gulp.watch(stylesheet_dir + '/js/site.js', ['minify']);
 });
