@@ -17,6 +17,16 @@
 img.alignleft  {width: initial; float: left; margin-right: 1em;}
 img.alignright {width: initial; float: right; margin-left: 1em;}
 img.aligncenter {margin: 0 auto 1em;}
+.wp-caption {
+  max-width: 100%;
+  p { margin: 0; }
+}
+.wp-caption-text {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
 
 .wp-caption {
   max-width: 100%;
@@ -102,7 +112,8 @@ html.touchevents .except-touch  { display: none; }
   clip-path: inset(50%);
   border: 0;
 }
-body.menu-overlay-open, body.form-overlay-open {
+
+body.overlay-open {
   overflow: hidden;
   height: 100%;
   width: 100%;

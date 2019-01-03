@@ -26,7 +26,8 @@ function enqueue_custom_scripts() {
   wp_enqueue_style( 'site-style', get_stylesheet_uri(), false, $site_style_mtime );
 
   # Get file modified date for site JS and register
-  if(isset($_ENV['MRI_ENVIRONMENT']) && $_ENV['MRI_ENVIRONMENT'] == 'development' ) {
+  # Add define('MRI_ENVIRONMENT', 'development'); to your wp-config.php file to enable dev mode.
+  if(defined('MRI_ENVIRONMENT') && MRI_ENVIRONMENT == 'development' ) {
     $site_js_mtime = filemtime(get_template_directory().'/js/site.js');
     wp_register_script( 'site-js', get_template_directory_uri() . '/js/site.js', array('jquery'), $site_js_mtime, true );
   }else {
