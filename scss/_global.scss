@@ -78,3 +78,9 @@ img.aligncenter {margin: 0 auto 1em;}
 
 html.no-touchevents .only-touch { display: none; }
 html.touchevents .except-touch  { display: none; }
+
+body.overlay-open {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}

@@ -20,7 +20,7 @@ var merge2        = require('merge2');
 
 //---------------------------------------------------------------
 // tasks
-gulp.task('scss', function () {
+gulp.task('scss', function (done) {
   gulp.src([
     stylesheet_dir + '/scss/style.scss',
     ])
@@ -28,9 +28,10 @@ gulp.task('scss', function () {
     .pipe(autoprefixer({ browsers: ['> 5%', 'last 2 versions'] }))
     .pipe(minifyCSS({keepSpecialComments: '*', keepBreaks: false}))
     .pipe(gulp.dest(stylesheet_dir + '/'));
+    done();
 });
 
-gulp.task('foundation-js', function () {
+gulp.task('foundation-js', function (done) {
   gulp.src([
       stylesheet_dir + '/js/foundation-js/enabled/foundation.core.js',
       stylesheet_dir + '/js/foundation-js/enabled/foundation.util.*.js',
@@ -39,18 +40,20 @@ gulp.task('foundation-js', function () {
     .pipe(babel())
     .pipe(concat('foundation.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
+    done();
 });
 
-gulp.task('includes', function () {
+gulp.task('includes', function (done) {
   gulp.src([
       stylesheet_dir + '/js/required/*.js',
       stylesheet_dir + '/js/includes/*.js',
     ])
     .pipe(concat('includes.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
+    done();
 });
 
-gulp.task('javascript', function () {
+gulp.task('javascript', function (done) {
   var includesStream = gulp.src(stylesheet_dir + '/js/src/*.js');
 
   var coffeeStream = gulp.src(stylesheet_dir + '/js/coffee/master.coffee')
@@ -59,6 +62,7 @@ gulp.task('javascript', function () {
   merge2(includesStream, coffeeStream)
     .pipe(concat('site.js'))
     .pipe(gulp.dest(stylesheet_dir + '/js/'));
+    done();
 });
 
 gulp.task('minify', function () {
