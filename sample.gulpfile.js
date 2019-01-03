@@ -30,18 +30,6 @@ gulp.task('scss', function (done) {
     done();
 });
 
-gulp.task('foundation-js', function (done) {
-  gulp.src([
-      stylesheet_dir + '/js/foundation-js/enabled/foundation.core.js',
-      stylesheet_dir + '/js/foundation-js/enabled/foundation.util.*.js',
-      stylesheet_dir + '/js/foundation-js/enabled/*.js',
-    ])
-    .pipe(babel())
-    .pipe(concat('foundation.js'))
-    .pipe(gulp.dest(stylesheet_dir + '/js/src/'));
-    done();
-});
-
 gulp.task('includes', function (done) {
   gulp.src([
       stylesheet_dir + '/js/required/*.js',
