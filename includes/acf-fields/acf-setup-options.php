@@ -7,11 +7,11 @@ if( function_exists('acf_add_options_page') ) {
 //---------------------------------------------------------------
 if( function_exists('acf_add_local_field_group') ):
 
-acf_add_local_field_group(array (
+acf_add_local_field_group(array(
   'key' => 'group_58bdeea174193',
   'title' => 'Site Wide Options',
-  'fields' => array (
-    array (
+  'fields' => array(
+    array(
       'key' => 'field_58bdf1451ecf5',
       'label' => 'Contact Info',
       'name' => '',
@@ -19,7 +19,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => '',
         'class' => '',
         'id' => '',
@@ -27,7 +27,7 @@ acf_add_local_field_group(array (
       'placement' => 'top',
       'endpoint' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf19e1ecf8',
       'label' => 'Email',
       'name' => 'options_email_address',
@@ -35,7 +35,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -45,7 +45,7 @@ acf_add_local_field_group(array (
       'prepend' => '',
       'append' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf1b81ecf9',
       'label' => 'Phone Number',
       'name' => 'options_phone_number',
@@ -53,7 +53,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -66,7 +66,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf1da1ecfa',
       'label' => 'Toll Free Phone Number',
       'name' => 'options_toll_free_number',
@@ -74,7 +74,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -87,7 +87,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf1ec1ecfb',
       'label' => 'Fax Number',
       'name' => 'options_fax_number',
@@ -95,7 +95,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -108,7 +108,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf1fc1ecfc',
       'label' => 'Street Address',
       'name' => 'options_street_address',
@@ -116,7 +116,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -129,7 +129,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf2101ecfd',
       'label' => 'City',
       'name' => 'options_city',
@@ -137,7 +137,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -150,7 +150,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf21e1ecfe',
       'label' => 'State / Province',
       'name' => 'options_province',
@@ -158,7 +158,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -171,7 +171,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf22e1ecff',
       'label' => 'Country',
       'name' => 'options_country',
@@ -179,7 +179,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -192,7 +192,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf2401ed00',
       'label' => 'ZIP / Postal Code',
       'name' => 'options_postal_code',
@@ -200,7 +200,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -213,7 +213,7 @@ acf_add_local_field_group(array (
       'readonly' => 0,
       'disabled' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdf1521ecf6',
       'label' => 'Social Media',
       'name' => '',
@@ -221,7 +221,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => '',
         'class' => '',
         'id' => '',
@@ -229,7 +229,7 @@ acf_add_local_field_group(array (
       'placement' => 'top',
       'endpoint' => 0,
     ),
-    array (
+    array(
       'key' => 'field_58bdeec7fee6d',
       'label' => 'Facebook URL',
       'name' => 'options_facebook_url',
@@ -237,7 +237,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -245,7 +245,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef867b937',
       'label' => 'Google Plus URL',
       'name' => 'options_google_plus_url',
@@ -253,7 +253,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -261,7 +261,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef897b938',
       'label' => 'Twitter URL',
       'name' => 'options_twitter_url',
@@ -269,7 +269,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -277,7 +277,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef8b7b939',
       'label' => 'LinkedIn URL',
       'name' => 'options_linkedin_url',
@@ -285,7 +285,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -293,7 +293,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef8d7b93a',
       'label' => 'Pinterest URL',
       'name' => 'options_pinterest_url',
@@ -301,7 +301,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -309,7 +309,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef8e7b93b',
       'label' => 'Instagram URL',
       'name' => 'options_instagram_url',
@@ -317,7 +317,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -325,7 +325,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef907b93c',
       'label' => 'Snapchat URL',
       'name' => 'options_snapchat_url',
@@ -333,7 +333,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -341,7 +341,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef967b93d',
       'label' => 'Flickr URL',
       'name' => 'options_flickr_url',
@@ -349,7 +349,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -357,7 +357,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef987b93e',
       'label' => 'YouTube URL',
       'name' => 'options_youtube_url',
@@ -365,7 +365,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -373,7 +373,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdef9a7b93f',
       'label' => 'Vimeo URL',
       'name' => 'options_vimeo_url',
@@ -381,7 +381,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -389,7 +389,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf09e7b940',
       'label' => 'SoundCloud URL',
       'name' => 'options_soundcloud_url',
@@ -397,7 +397,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -405,7 +405,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf0ac7b941',
       'label' => 'Etsy URL',
       'name' => 'options_etsy_url',
@@ -413,7 +413,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -421,7 +421,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf0bc7b942',
       'label' => 'Tumblr URL',
       'name' => 'options_tumblr_url',
@@ -429,7 +429,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -437,7 +437,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf0ca7b943',
       'label' => 'Reddit URL',
       'name' => 'options_reddit_url',
@@ -445,7 +445,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -453,7 +453,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf0ee7b944',
       'label' => 'Houzz URL',
       'name' => 'options_houzz_url',
@@ -461,7 +461,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -469,7 +469,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_58bdf1027b945',
       'label' => 'Yelp URL',
       'name' => 'options_yelp_url',
@@ -477,7 +477,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -485,7 +485,7 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
       'key' => 'field_bada21b4eae91',
       'label' => 'Foursquare URL',
       'name' => 'options_foursquare_url',
@@ -493,7 +493,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => 50,
         'class' => '',
         'id' => '',
@@ -501,7 +501,23 @@ acf_add_local_field_group(array (
       'default_value' => '',
       'placeholder' => '',
     ),
-    array (
+    array(
+      'key' => 'field_5c2e83c5bba82',
+      'label' => 'TripAdvisor URL (copy)',
+      'name' => 'options_tripadvisor _url_copy',
+      'type' => 'url',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '50',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+    ),
+    array(
       'key' => 'field_58bdf1761ecf7',
       'label' => 'Other',
       'name' => '',
@@ -509,7 +525,7 @@ acf_add_local_field_group(array (
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
-      'wrapper' => array (
+      'wrapper' => array(
         'width' => '',
         'class' => '',
         'id' => '',
@@ -518,9 +534,9 @@ acf_add_local_field_group(array (
       'endpoint' => 0,
     ),
   ),
-  'location' => array (
-    array (
-      array (
+  'location' => array(
+    array(
+      array(
         'param' => 'options_page',
         'operator' => '==',
         'value' => 'acf-options',

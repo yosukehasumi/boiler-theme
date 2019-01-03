@@ -3,6 +3,9 @@ body {
   /*background-image: url(./images/pattern.jpg);*/
   /*background-size: cover;*/
 }
+/*#login {
+  padding: 0;
+}*/
 #login h1 a, .login h1 a {
   /*background-image: url(./images/logo.png);*/
   /*height: 110px;*/

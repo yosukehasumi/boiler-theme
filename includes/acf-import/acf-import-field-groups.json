@@ -2109,6 +2109,22 @@
                 "placeholder": ""
             },
             {
+                "key": "field_5c2e83c5bba82",
+                "label": "TripAdvisor  URL (copy)",
+                "name": "options_tripadvisor _url_copy",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
                 "key": "field_58bdf1761ecf7",
                 "label": "Other",
                 "name": "",

@@ -75,6 +75,7 @@ Thumbs.db
 *.swp
 *.sublime-workspace
 *.sublime-project
+/.idea/
 
 # Server Generated Files #
 ##########################
