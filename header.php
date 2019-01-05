@@ -20,7 +20,7 @@
 
   <a href="<?php echo home_url(); ?>" id="logo_link" class="sprite" title="<?php bloginfo(); ?>"><img src="<?php echo(get_template_directory_uri().'/images/logo.png'); ?>" alt="<?php bloginfo(); ?>"></a>
 
-  <button id="mobile-nav-toggle-button">MENU <i class="fa fa-bars" aria-hidden="true"></i></button>
+  <button id="mobile-nav-toggle-button"><span class="show-for-sr">MENU </span><span class="fa fa-bars" aria-hidden="true"></span></button>
 
   <nav id="header-navigation" class="site-navigation">
     <?php wp_nav_menu(array( 'theme_location'=>'primary', 'container'=>false, 'fallback_cb' => false )); ?>

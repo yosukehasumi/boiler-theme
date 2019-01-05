@@ -72,30 +72,30 @@ function get_the_address($format = 'inline', $icons = true) {
       break;
 
       case 'phone':
-      if($options_phone_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_phone_number.'"><i class="fa fa-fw fa-phone"></i>&nbsp;'.$options_phone_number.'</a>';}
+      if($options_phone_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_phone_number.'"><span class="fa fa-fw fa-phone"></span>&nbsp;'.$options_phone_number.'</a>';}
       return $html;
       break;
 
       case 'tollfree':
-      if($options_toll_free_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_toll_free_number.'"><i class="fa fa-fw fa-phone"></i>&nbsp;'.$options_toll_free_number.'</a>';}
+      if($options_toll_free_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_toll_free_number.'"><span class="fa fa-fw fa-phone"></span>&nbsp;'.$options_toll_free_number.'</a>';}
       return $html;
       break;
 
       case 'fax':
-      if($options_fax_number){$html .= '<a title="'.__('Send Us A Fax').'" href="tel:'.$options_fax_number.'"><i class="fa fa-fw fa-fax"></i>&nbsp;'.$options_fax_number.'</a>';}
+      if($options_fax_number){$html .= '<a title="'.__('Send Us A Fax').'" href="tel:'.$options_fax_number.'"><span class="fa fa-fw fa-fax"></span>&nbsp;'.$options_fax_number.'</a>';}
       return $html;
       break;
 
       case 'email':
-      if($options_email_address){$html .= '<a title="'.__('Send Us An Email').'" href="mailto:'.$options_email_address.'"><i class="fa fa-fw fa-envelope"></i>&nbsp;'.$options_email_address.'</a>';}
+      if($options_email_address){$html .= '<a title="'.__('Send Us An Email').'" href="mailto:'.$options_email_address.'"><span class="fa fa-fw fa-envelope"></span>&nbsp;'.$options_email_address.'</a>';}
       return $html;
       break;
 
       default:
-      if($options_phone_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_phone_number.'"><i class="fa fa-fw fa-phone"></i>&nbsp;'.$options_phone_number.'</a><br>';}
-      if($options_toll_free_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_toll_free_number.'"><i class="fa fa-fw fa-phone"></i>&nbsp;'.$options_toll_free_number.'</a><br>';}
-      if($options_fax_number){$html .= '<a title="'.__('Send Us A Fax').'" href="tel:'.$options_fax_number.'"><i class="fa fa-fw fa-fax"></i>&nbsp;'.$options_fax_number.'</a><br>';}
-      if($options_email_address){$html .= '<a title="'.__('Send Us An Email').'" href="mailto:'.$options_email_address.'"><i class="fa fa-fw fa-envelope"></i>&nbsp;'.$options_email_address.'</a><br>';}
+      if($options_phone_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_phone_number.'"><span class="fa fa-fw fa-phone"></span>&nbsp;'.$options_phone_number.'</a><br>';}
+      if($options_toll_free_number){$html .= '<a title="'.__('Give Us A Call').'" href="tel:'.$options_toll_free_number.'"><span class="fa fa-fw fa-phone"></span>&nbsp;'.$options_toll_free_number.'</a><br>';}
+      if($options_fax_number){$html .= '<a title="'.__('Send Us A Fax').'" href="tel:'.$options_fax_number.'"><span class="fa fa-fw fa-fax"></span>&nbsp;'.$options_fax_number.'</a><br>';}
+      if($options_email_address){$html .= '<a title="'.__('Send Us An Email').'" href="mailto:'.$options_email_address.'"><span class="fa fa-fw fa-envelope"></span>&nbsp;'.$options_email_address.'</a><br>';}
       if($options_street_address){$html .= '<br>' . $options_street_address;}
       if($options_city){$html .= '<br>' . $options_city;}
       if($options_province){$html .= ', ' . $options_province;}

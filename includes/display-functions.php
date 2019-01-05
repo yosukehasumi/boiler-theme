@@ -47,7 +47,7 @@ function icon_shortcode($atts, $content = NULL) {
   $a = shortcode_atts( array(
     'class' => ''
     ), $atts );
-  $content = '<i class="fa '.$class.'"></i>';
+  $content = '<span class="fa '.$class.'"></span>';
   return $content;
 }
 add_shortcode( 'icon', 'icon_shortcode' );
